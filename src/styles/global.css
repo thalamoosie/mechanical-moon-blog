@@ -156,6 +156,31 @@ hr {
   }
 }
 
+@media screen and (min-width: 636px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 0.5em;
+}
+
+.hamburger .line {
+  display: block;
+  width: 38px;
+  height: 4px;
+  margin-bottom: 10px;
+  background-color: var(--blue-light);
+}
+
+.hamburger:hover .line {
+  background-color: orange;
+}
+
 .sr-only {
   border: 0;
   padding: 0;
