@@ -8,9 +8,10 @@
 
 :root {
   --accent: #5693bb;
-  --accent-dark: #000d8a;
   --main-dark: #0d101b;
+  --main-dark-hue-800: #1f263b;
   --dark-container: #1a344c;
+  --medium-container: #10253b;
   --main-dark-rgb: 20, 51, 79;
   --main: 2, 39, 57;
   --black: 15, 18, 25;
@@ -25,44 +26,35 @@
   --ice-blue: 20, 142, 173;
   --color-1: 20, 51, 79;
   --color-2: 6, 7, 15;
+  --color-dblue-light: 16, 29, 34;
+  --color-dblue-dark: 32, 41, 66;
   --gray-gradient: rgba(var(--gray-light), 0.5), #fff;
   --dark-gradient: rgba(var(--main), 50%), #506e86;
   --dark-radial-gradient: rgba(var(--color-1), 1), rgba(var(--color-2), 1);
+  --dark-menu-gradient: rgba(var(--color-dblue-light), 1),
+    rgba(var(--color-dblue-dark), 1);
   --box-shadow: 0 2px 6px rgba(var(--bright-orange), 25%),
     0 8px 24px rgba(var(--burnt-orange), 33%),
     0 16px 32px rgba(var(--burnt-orange), 33%);
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-/* @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-} */
+
 body {
   font-family: "Outfit", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
-  /* background: linear-gradient(var(--dark-gradient)); */
   background-color: var(--main-dark);
   background-repeat: no-repeat;
-  /* background-size: 100% 600px; */
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-light));
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
 }
 main {
-  width: 720px;
+  width: 760px;
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 3em 1em;
@@ -101,6 +93,8 @@ a {
 }
 a:hover {
   color: rgba(var(--bright-orange));
+  text-shadow: 1px 1px 10px rgb(var(--bright-orange)),
+    1px 1px 10px rgb(var(--bright-orange));
 }
 p {
   margin-bottom: 1em;
@@ -154,6 +148,110 @@ hr {
   main {
     padding: 1em;
   }
+}
+
+@media screen and (min-width: 636px) {
+  .hamburger,
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  padding-right: 20px;
+  cursor: pointer;
+  position: relative;
+  padding-top: 0.75em;
+  margin-left: auto;
+}
+
+.hamburger .line {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 25px;
+  background-color: var(--blue-light);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.hamburger.active {
+  /* transform: translateX(3em); */
+  transition: 0.4s ease-in-out;
+  width: 20px;
+  height: 20px;
+}
+
+.hamburger span:nth-child(1) {
+  top: 25%;
+}
+
+.hamburger span:nth-child(3) {
+  top: 75%;
+}
+
+.hamburger:hover .line {
+  background-color: orange;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 60%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.mobile-nav.active {
+  top: 0;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  justify-items: top;
+  /* background-color: var(--main-dark-hue-800); */
+  background: linear-gradient(0deg, var(--dark-menu-gradient));
+  height: 100vh;
+  max-height: 325px;
+  width: 100%;
+  top: -999px;
+  right: 0;
+  position: fixed;
+  padding-top: 30px;
+  font-size: 1.75rem;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 0 10px black;
+  border-radius: 0 0 25px 25px;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--blue-light);
+}
+
+a:hover {
+  color: orange;
 }
 
 .sr-only {

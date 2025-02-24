@@ -2,11 +2,13 @@
 import HeaderLink from "./HeaderLink.astro";
 import SocialIcons from "./SocialIcons.astro";
 import { SITE_TITLE, SOCIAL } from "../consts";
+import Hamburger from "./Hamburger.astro";
 ---
 
 <header>
   <nav>
     <h2 class="site-title"><a href="/">{SITE_TITLE}</a></h2>
+    <Hamburger />
     <div class="internal-links">
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
@@ -18,10 +20,16 @@ import { SITE_TITLE, SOCIAL } from "../consts";
   </nav>
 </header>
 
+<script>
+  import "../scripts/menu.js";
+</script>
+
 <style>
   header {
     margin: 0;
     padding: 0 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
     box-shadow: 0 2px 8px rgba(var(--ice-blue), 50%);
     background: radial-gradient(circle, var(--dark-radial-gradient));
     color: var(--blue-light);
@@ -82,5 +90,15 @@ import { SITE_TITLE, SOCIAL } from "../consts";
 
   nav h2.site-title {
     --accent: var(--blue-light);
+  }
+
+  @media screen and (max-width: 636px) {
+    .internal-links {
+      display: none;
+    }
+
+    .social-icons {
+      display: none;
+    }
   }
 </style>

@@ -1,9 +1,25 @@
 ---
-
+import SocialIcons from "./SocialIcons.astro";
+import HeaderLink from "./HeaderLink.astro";
+import { SOCIAL } from "../consts";
 ---
 
+<nav class="mobile-nav">
+  <ul>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/about">CV</a></li>
+    <li><SocialIcons icons={SOCIAL} /></li>
+  </ul>
+</nav>
 <div class="hamburger">
   <span class="line"></span>
   <span class="line"></span>
   <span class="line"></span>
 </div>
+
+<style>
+  li {
+    list-style: none;
+  }
+</style>
