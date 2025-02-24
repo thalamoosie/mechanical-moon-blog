@@ -1,7 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "adrian pezz";
+export const SITE_TITLE = "Adrian Pezz";
 export const AUTHOR_DETAILS = {
   firstName: "adrian",
   lastName: "pezzillo",
