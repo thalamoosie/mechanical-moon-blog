@@ -1,37 +1,140 @@
 ---
 ---
 
-<div class="timeline">
-    <div class="container left">
-      <div class="content">
-        <h2>2017</h2>
-        <p>Lorem ipsum..</p>
-      </div>
+<div class="container">
+    <div class="timeline">
+        <ul>
+            <li>
+                <div class="timeline-content">
+                    <h1>Thing 1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eius eligendi possimus commodi labore ratione voluptas dolor, iure veniam sapiente libero? Praesentium, saepe optio nostrum beatae numquam nisi ut eaque!</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h1>Thing 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eius eligendi possimus commodi labore ratione voluptas dolor, iure veniam sapiente libero? Praesentium, saepe optio nostrum beatae numquam nisi ut eaque!</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h1>Thing 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eius eligendi possimus commodi labore ratione voluptas dolor, iure veniam sapiente libero? Praesentium, saepe optio nostrum beatae numquam nisi ut eaque!</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h1>Thing 4</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eius eligendi possimus commodi labore ratione voluptas dolor, iure veniam sapiente libero? Praesentium, saepe optio nostrum beatae numquam nisi ut eaque!</p>
+                </div>
+            </li>
+        </ul>
     </div>
-    <div class="container right">
-      <div class="content">
-        <h2>2016</h2>
-        <p>Lorem ipsum..</p>
-      </div>
-    </div>
-  </div> 
+</div>
 
-  <style>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 0;
+        /* background-color: black; */
+    }
+
     .timeline {
-        position: relative;
-        max-width: 1200px;
+        width: 100%;
+        height: auto;
+        max-width: 800px;
         margin: 0 auto;
+        position: relative;
     }
 
-    .timeline::after {
-        content: '';
-        position: absolute;
-        width: 6px;
-        background-color: white;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -3px;
+    .timeline ul {
+        list-style: none;
     }
 
-  </style>
+    .timeline ul li {
+        padding: 20px;
+        background-color: var(--medium-container);
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .timeline ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .timeline-content h1 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 200;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .timeline::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: gray;
+        }
+        .timeline ul li {
+            width: 50%;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .timeline ul li:nth-child(odd) {
+            float: left;
+            clear: right;
+            transform: translateX(-30px);
+        }
+
+        .timeline ul li:nth-child(even) {
+            float: right;
+            clear: left;
+            transform: translateX(30px);
+        }
+
+        .timeline ul li::after {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: gray;
+            border-radius: 50%;
+            top: 0;
+        }
+
+        .timeline ul li:nth-child(odd)::after {
+            right: -30px;
+            transform: translate(50%, -50%);
+        }
+
+        .timeline ul li:nth-child(even)::after {
+            left: -30px;
+            transform: translate(-50%,-50%);
+        }
+
+        .timeline ul li:hover:after {
+            background-color: aqua;
+        }
+    }
+</style>
