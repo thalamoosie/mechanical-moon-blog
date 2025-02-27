@@ -8,6 +8,7 @@
 
 :root {
   --accent: #5693bb;
+  --accent-light: #5693bb;
   --main-dark: #0d101b;
   --main-dark-hue-800: #1f263b;
   --dark-container: #1a344c;
@@ -28,11 +29,15 @@
   --color-2: 6, 7, 15;
   --color-dblue-light: 16, 29, 34;
   --color-dblue-dark: 32, 41, 66;
+  --color-sunrise-light: 252, 145, 21;
+  --color-sunrise-dark: 198, 36, 85;
   --gray-gradient: rgba(var(--gray-light), 0.5), #fff;
   --dark-gradient: rgba(var(--main), 50%), #506e86;
   --dark-radial-gradient: rgba(var(--color-1), 1), rgba(var(--color-2), 1);
   --dark-menu-gradient: rgba(var(--color-dblue-light), 1),
     rgba(var(--color-dblue-dark), 1);
+  --sunrise-gradient: rgba(var(--color-sunrise-light), 1),
+    rgba(var(--color-sunrise-dark), 1);
   --box-shadow: 0 2px 6px rgba(var(--bright-orange), 25%),
     0 8px 24px rgba(var(--burnt-orange), 33%),
     0 16px 32px rgba(var(--burnt-orange), 33%);
