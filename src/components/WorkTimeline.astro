@@ -1,0 +1,185 @@
+---
+import resume from "../data/resume.json"
+const latestPosition = resume.work[0];
+const chop = resume.work[1];
+const design = resume.work[2];
+---
+
+
+<div class="container">
+    <div class="timeline">
+        <ul>
+            <li>
+                <div class="timeline-content">
+                    <h1><a href={latestPosition.url}>{latestPosition.name}</a></h1>
+                    <em><h3 class="job-title">{latestPosition.position}</h3></em>
+                    <h3 class="date">{latestPosition.startDate} - {latestPosition.endDate} </h3>
+                    <p>{latestPosition.summary}</p>
+                    <em><h3 class="job-title">{latestPosition.promotedFrom}</h3></em>
+                    <p>{latestPosition.promotedFromSummary}</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <a href={chop.url}><h1>{chop.name}</h1></a>
+                    <em><h3 class="job-title">{chop.position}</h3></em>
+                    <h3 class="date">{chop.startDate} - {chop.endDate} </h3>
+                    <p>{chop.summary}</p>
+                    <em><h3 class="job-title">{chop.promotedFrom}</h3></em>
+                    <p>{chop.promotedFromSummary}</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h1>{design.name}</h1>
+                    <em><h3 class="job-title">{design.position}</h3></em>
+                    <h3 class="date">{design.startDate} - {design.endDate}</h3>
+                    <p>{design.summary}</p>
+                    <p>Highlights include cool projects like <a href="https://humblewood.com/">{design.highlights[0]}</a>, <a href="https://boardgamegeek.com/boardgame/312267/star-wars-unlock">{design.highlights[1]}</a> and <a href="https://firesidegames.com/product/castle-panic-second-edition/">{design.highlights[2]}</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 100px 0; */
+        /* background-color: black; */
+    }
+
+    .timeline {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .timeline ul {
+        list-style: none;
+    }
+
+    .timeline ul li {
+        padding: 20px;
+        background-color: var(--medium-container);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 2px solid rgb(var(--bright-orange));
+    }
+
+    .timeline ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .timeline-content h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 200;
+    }
+
+    .timeline-content .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+
+    .timeline-content .job-title {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 2px;
+        color: var(--accent)
+    }
+
+    .timeline-content a {
+        text-decoration: none;
+    }
+    .timeline-content h1 a:hover {
+        color: rgb(var(--bright-orange));
+    }
+
+    .timeline-content h1 a {
+        color: rgb(var(--gray-light));
+    }
+
+    @media only screen and (min-width: 768px) {
+        .timeline::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(180deg, var(--sunrise-gradient) 100%);
+        }
+        .timeline ul li {
+            width: 60%;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .timeline ul li:nth-child(odd) {
+            float: left;
+            clear: right;
+            transform: translateX(-25%);
+            border-radius: 20px 0px 20px 20px
+        }
+
+        .timeline ul li:nth-child(even) {
+            float: right;
+            clear: left;
+            transform: translateX(25%);
+            border-radius: 0px 20px 20px 20px
+        }
+
+        .timeline ul li::after {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: var(--main-dark);
+            border-radius: 50%;
+            top: 0;
+            border: 2px solid rgb(var(--bright-orange));
+        }
+
+        .timeline ul li:nth-child(odd)::after {
+            right: -39px;
+            transform: translate(50%, -50%);
+        }
+
+        .timeline ul li:nth-child(even)::after {
+            left: -39px;
+            transform: translate(-50%,-50%);
+        }
+
+        .timeline ul li:hover:after {
+            background-color: rgb(255, 204, 39);
+        }
+
+        .timeline-content .date {
+            position: absolute;
+            top: -25px;
+        }
+        
+    }
+</style>

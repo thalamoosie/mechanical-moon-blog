@@ -1,0 +1,123 @@
+{
+  "basics": {
+    "name": "Adrian Pezzillo",
+    "label": "Platform Engineer",
+    "image": "",
+    "phone": "N/A",
+    "url": "",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "19148",
+      "city": "Philadelphia",
+      "countryCode": "US",
+      "region": "PA"
+    },
+    "profiles": [
+      {
+        "network": "",
+        "username": "",
+        "url": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Woebot Health",
+      "position": "Platform Engineer",
+      "url": "https://woebothealth.com/",
+      "startDate": "June 2022",
+      "endDate": "Current",
+      "summary": "Currently I am a platform engineer with Woebot Health, where I work on all parts of a mobile app chatbot stack, including Node.js serverless backends, a React-based internal tool that governs chatbot content flow and a React Native mobile app-- all in service of great mental health experiences for users.",
+      "highlights": [
+        "Developed and implemented Node.js platform features for campaign and access code management, optimizing both user and customer experiences while enhancing internal tools to drive team efficiency for non-technical team members.",
+        "Collaborated with content and product teams to address ongoing CMS issues, including CSRF errors, React components and iterative feature feedback. Streamlined bug resolution for less frequently used components by addressing stale backlog items, leading to a noticeable reduction in internally reported issues over 5 months",
+        "Conducted DAST assessments and patch cycles, reducing API vulnerabilities and strengthening SOC2 compliance",
+        "Supported IaC automation in Terraform and CircleCI configurations, reducing deployment errors by 3%",
+        "Monitored and maintained key AWS and MongoDB Atlas production systems, ensuring high reliability and SLA adherence"
+      ],
+      "promotedFrom": "Quality Engineer",
+      "promotedFromSummary": "Started as a Quality Engineer, where I built out a full E2E test automation suite for a native iOS app, fleshed out a mocha test automation framework for our bot and created a TCM repo from the ground up"
+    },
+    {
+      "name": "Children's Hospital of Philadelphia",
+      "position": "IS Analyst",
+      "url": "https://chop.edu/",
+      "startDate": "Feb 2020",
+      "endDate": "Oct 2021",
+      "summary": "Developed technical solutions to quickly serve patients and staff in high traffic areas of the hospital system. Used shell scripting and automation techniques to automate clinical lab and OR processes, which reduced LIS equipment downtime by 20%",
+      "highlights": [],
+      "promotedFrom": "Deployment Technician",
+      "promotedFromSummary": "Configured and deployed Windows and macOS systems using SCCM, JAMF and Intune to support a hospital-system wide upgrade project. Architected full laboratory and OR rollouts, upgrading and providing support for scientific equipment"
+    },
+    {
+      "name": "Self-Employed",
+      "position": "Freelance Designer & Consultant",
+      "url": "",
+      "startDate": "Feb 2020",
+      "endDate": "July 2010",
+      "summary": "Produced and delivered high quality visual assets as a part of a creative pipeline for various publishers. Created concept art and finished illustrations for many clients in the TTRPG/Board Gaming space and Comics industry.",
+      "highlights": ["Humblewood", "Star Wars: Unlock!", "Castle Panic"],
+      "promotedFrom": "",
+      "promotedFromSummary": ""
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "url": "https://institution.com/",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project",
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description...",
+      "highlights": ["Won award at AIHacks 2016"],
+      "url": "https://project.com/"
+    }
+  ]
+}

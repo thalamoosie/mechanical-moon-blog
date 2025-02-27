@@ -1,0 +1,35 @@
+---
+import WorkTimeline from "../components/WorkTimeline.astro"
+import Header from "../components/Header.astro"
+import BaseHead from "../components/BaseHead.astro"
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <h1>Experience</h1>
+    <p>From creative work through IT operations and resting in software engineering, I love solving challenging puzzles.</p>
+    <p>[ Insert Resume Download Button ]</p>
+
+    <main>
+      <WorkTimeline />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+    h1 {
+        text-align: center;
+        margin-top: 10px;
+    }
+    p {
+        text-align: center;
+    }
+</style>
