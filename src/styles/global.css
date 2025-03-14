@@ -163,8 +163,8 @@ hr {
 }
 
 .hamburger {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   padding-right: 20px;
   cursor: pointer;
   position: relative;
@@ -187,12 +187,10 @@ hr {
 
 .hamburger.active {
   transition: 0.4s ease-in-out;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 32px;
   z-index: 10000;
   overflow: hidden;
-  /* right: 20px;
-  padding-bottom: 20px; */
 }
 
 .hamburger span:nth-child(1) {
@@ -208,7 +206,7 @@ hr {
 }
 
 .hamburger.active span:nth-child(1) {
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
@@ -218,7 +216,7 @@ hr {
 
 .hamburger.active span:nth-child(3) {
   top: 50%;
-  transform: translate(-50%, 50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .mobile-nav.active {
@@ -260,6 +258,12 @@ hr {
 
 a:hover {
   color: orange;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 .sr-only {
